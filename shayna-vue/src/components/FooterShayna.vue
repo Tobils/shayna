@@ -45,6 +45,7 @@
                 </div>
             </div>
         </div>
+
         <div class="copyright-reserved">
             <div class="container">
                 <div class="row">
@@ -70,3 +71,9 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.footer-left {
+    text-align: left;
+}
+</style>
