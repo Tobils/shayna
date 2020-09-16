@@ -37,6 +37,8 @@ database mysql dijalankan di atas docker dengan konfigurasi docker-compose.yml s
             <img src="ERD-SHAYNA.png" width="100%" alt="erd shayna" />
         </p>
     - Tabel Product : `php artisan make:migration create_products_table --create=products`
+    - Tabel Galeri Produk : `php artisan make:migration create_product_galleries_table --create=product_galleries`
+    - Tabel transaction : `php artisan make:migration create_transactions_table --create=transactions`
 
 
 
