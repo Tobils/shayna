@@ -4,32 +4,26 @@
 database mysql dijalankan di atas docker dengan konfigurasi docker-compose.yml sebagai berikut :
 1. docker-compose.yml
     ```yml
-    version: '3.3'
+    # docker-compose.yml
+    version: '3'
     services:
-    db:
-        image: mysql:5.7
-        restart: always
-        environment:
-        MYSQL_DATABASE: 'shayna-backend'
-        # So you don't have to use root, but you can if you like
-        MYSQL_USER: 'tobil'
-        # You can use whatever password you like
-        MYSQL_PASSWORD: 'manjaddawajada'
-        # Password for root access
-        MYSQL_ROOT_PASSWORD: 'manjaddawajada'
-        ports:
-        # <Port exposed> : < MySQL Port running inside container>
-        - '3306:3306'
-        expose:
-        # Opens port 3306 on the container
-        - '3306'
-        # Where our data will be persisted
+    database:
+        image: postgres:latest # use latest official postgres version
+        env_file:
+        - database.env # configure postgres
         volumes:
-        - my-db:/var/lib/mysql
-    # Names our volume
-    volumes:
-    my-db:
+        - ./postgres-data:/var/lib/postgresql/data
+        ports:
+        - 5432:5432
     ```
+2. database.env
+    ```js
+    # database.env
+    POSTGRES_USER=bwa_laravue
+    POSTGRES_PASSWORD=bwa_laravue_password
+    POSTGRES_DB=bwa_laravue_shayna
+    ```
+3. run service : `docker-compose up -d`
 
 2. Entity Relationship Diagram
     - ERD menggunakan app.lucidchart.com
@@ -39,7 +33,12 @@ database mysql dijalankan di atas docker dengan konfigurasi docker-compose.yml s
     - Tabel Product : `php artisan make:migration create_products_table --create=products`
     - Tabel Galeri Produk : `php artisan make:migration create_product_galleries_table --create=product_galleries`
     - Tabel transaction : `php artisan make:migration create_transactions_table --create=transactions`
+    - Tabel transaction_details : `php artisan make:migration create_transaction_details_table --create=transaction_details`
 
+3. auth admin
+    - `composer require laravel/ui --dev`
+    - `php artisan ui vue --auth`
+    - `npm install && npm run dev`
 
 
 ## REFERENSI
