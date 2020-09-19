@@ -53,8 +53,8 @@
                             </tr>
                         @empty
                         <tr>
-                            <td class="textcenter p-5" colspan="6">
-                                Data Tidak Tersedia
+                            <td class="text-center p-5" colspan="6">
+                                <h3>Data Tidak Tersedia</h3>
                             </td>
                         </tr>
                         @endforelse

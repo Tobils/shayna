@@ -47,7 +47,10 @@ database mysql dijalankan di atas docker dengan konfigurasi docker-compose.yml s
     - ckeditor untuk nulis paragraf
 
 5. admin gallery product
-    - model : `php artisan make:model Models\\ProductGallery`
+    - model     : `php artisan make:model Models\\ProductGallery`
+    - storage   : `php artisan storage:link`
+    - request   : `php artisan make:request ProductGalleryRequest`
+    - controller: `php artisan make:controller ProductGalleryController --resource`
 
 
 
