@@ -44,6 +44,7 @@ database mysql dijalankan di atas docker dengan konfigurasi docker-compose.yml s
     - `php artisan make:model Models\\TransactionDetail`
     - `php artisan make:request ProductRequest`
     - `php artisan make:controller ProductController --resource`
+    - ckeditor untuk nulis paragraf
 
 ## REFERENSI
 - [elaadmin colorlib](https://colorlib.com/polygon/elaadmin/index.html)
