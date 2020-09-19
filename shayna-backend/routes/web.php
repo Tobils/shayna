@@ -13,5 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'DashboardController@index');
- 
+Route::get('/', 'DashboardController@index')->name('dashboard');
+
+// ditambahkan secara otomatis saat menjalankan : php artisan ui vue --auth
+Auth::routes(['register'=>false]);
+
+Route::resource('products', 'ProductController');
