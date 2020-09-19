@@ -18,5 +18,8 @@ Route::get('/', 'DashboardController@index')->name('dashboard');
 // ditambahkan secara otomatis saat menjalankan : php artisan ui vue --auth
 Auth::routes(['register'=>false]);
 
+Route::get('products/{id}/gallery', 'ProductController@gallery')
+    ->name('products.gallery');
+
 Route::resource('products', 'ProductController');
 Route::resource('products-galleries', 'ProductGalleryController');
