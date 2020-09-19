@@ -118,6 +118,6 @@ class ProductController extends Controller
         $item->delete();
 
         return redirect()->route('products.index');
-        
+
     }
 }

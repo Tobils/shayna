@@ -41,10 +41,16 @@ database mysql dijalankan di atas docker dengan konfigurasi docker-compose.yml s
     - `npm install && npm run dev`
 
 4. admin data product
-    - `php artisan make:model Models\\TransactionDetail`
+    - `php artisan make:model Models\\Product`
     - `php artisan make:request ProductRequest`
     - `php artisan make:controller ProductController --resource`
     - ckeditor untuk nulis paragraf
+
+5. admin gallery product
+    - model : `php artisan make:model Models\\ProductGallery`
+
+
+
 
 ## REFERENSI
 - [elaadmin colorlib](https://colorlib.com/polygon/elaadmin/index.html)
