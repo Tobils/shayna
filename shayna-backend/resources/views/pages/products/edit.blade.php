@@ -19,26 +19,26 @@
                 <div class="form-group">
                     <label for="type" class="form-control-lable">Tipe Barang</label>
                     <input type="text" name="type" value="{{ old('type') ? old('type') : $item->type }}" class="form-control @error('type') is-invalid @enderror"/>
-                    @error('name') <div class="text-muted">{{$message}}</div>@enderror
+                    @error('type') <div class="text-muted">{{$message}}</div>@enderror
                 </div>
 
                 <div class="form-group">
                     <label for="description" class="form-control-lable">Deskripsi Barang</label>
                     <textarea id="editor" name="description" class="form-control @error('description') is-invalid @enderror">{{ old('description') ? old('description') : $item->description }}</textarea>
-                    @error('name') <div class="text-muted">{{$message}}</div>@enderror
+                    @error('description') <div class="text-muted">{{$message}}</div>@enderror
                 </div>
 
                 <div class="form-group">
                     <label for="price" class="form-control-lable">Harga Barang</label>
                     <input type="number" name="price" value="{{ old('price') ? old('price') : $item->price }}" class="form-control @error('price') is-invalid @enderror"/>
-                    @error('name') <div class="text-muted">{{$message}}</div>@enderror
+                    @error('price') <div class="text-muted">{{$message}}</div>@enderror
                 </div>
 
 
                 <div class="form-group">
                     <label for="quantity" class="form-control-lable">Jumlah Barang</label>
                     <input type="number" name="quantity" value="{{ old('quantity') ? old('quantity') :  $item->quantity }}" class="form-control @error('quantity') is-invalid @enderror"/>
-                    @error('name') <div class="text-muted">{{$message}}</div>@enderror
+                    @error('quantity') <div class="text-muted">{{$message}}</div>@enderror
                 </div>
 
                 <div class="form-group">
