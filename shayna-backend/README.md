@@ -52,7 +52,9 @@ database mysql dijalankan di atas docker dengan konfigurasi docker-compose.yml s
     - request   : `php artisan make:request ProductGalleryRequest`
     - controller: `php artisan make:controller ProductGalleryController --resource`
 
-
+6. Transaksi
+    - model     : `php artisan make:model Models\\Transaction`
+    - controller: `php artisan make:controller TransactionController --resource`
 
 
 ## REFERENSI

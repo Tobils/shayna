@@ -12,13 +12,19 @@ class TransactionDetail extends Model
     use SoftDeletes;
 
     protected $fillable = [
-        'name', 'type', 'description', 'price', 'slug', 'quantity'
+        'transacions_id', 'products_id'
     ];
 
     protected $hidden = [
     ];
 
-    public function galleries(){
-        // return $this->hasMany(ProductGallery::class, "products_id");
+    // relasi dengan transactions_id
+    public function transaction(){
+        return $this->belongsTo(Transaction::class, "transactions_id", 'id');
+    }
+
+    // relasi dengan products_id
+    public function product(){
+        return $this->belongsTo(Product::class, "products_id", 'id');
     }
 }

@@ -23,3 +23,4 @@ Route::get('products/{id}/gallery', 'ProductController@gallery')
 
 Route::resource('products', 'ProductController');
 Route::resource('products-galleries', 'ProductGalleryController');
+Route::resource('transactions', 'TransactionController');
