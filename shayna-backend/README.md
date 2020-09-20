@@ -55,6 +55,7 @@ database mysql dijalankan di atas docker dengan konfigurasi docker-compose.yml s
 6. Transaksi
     - model     : `php artisan make:model Models\\Transaction`
     - controller: `php artisan make:controller TransactionController --resource`
+    - transaksi detail menggunakan modal/pop up dinamis
 
 
 ## REFERENSI

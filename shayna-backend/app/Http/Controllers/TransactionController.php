@@ -67,7 +67,7 @@ class TransactionController extends Controller
         $item = Transaction::with('details.product')->findOrFail($id);
 
         return view('pages.transactions.show')->with([
-            'item' => $item
+            'item'=>"suhada"
         ]);
     }
 
@@ -110,7 +110,11 @@ class TransactionController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $item = Transaction::findOrFail($id);
+        $item->delete();
+
+
+        return redirect()->route('transactions.index');
     }
 
     public function setStatus(Request $request, $id)
