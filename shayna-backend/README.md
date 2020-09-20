@@ -57,7 +57,44 @@ database mysql dijalankan di atas docker dengan konfigurasi docker-compose.yml s
     - controller: `php artisan make:controller TransactionController --resource`
     - transaksi detail menggunakan modal/pop up dinamis
 
-
+7. API [ANTAR MUKA PEMROGRAMAN APLIKASI]
+    - response formater
+    - API Produk 
+        - `php artisan make:controller API\\ProductController`
+        - uri : `http://localhost:8000/api/products?id=2` method : GET
+        - response
+            ```json
+            {
+                "meta": {
+                    "code": 200,
+                    "status": "success",
+                    "message": "Data produk berhasil diambil"
+                },
+                "data": {
+                    "id": 2,
+                    "name": "zara celana",
+                    "slug": "zara-celana",
+                    "type": "celana",
+                    "description": "<p>jara adalah celana masa kini uhuy</p>",
+                    "price": 20,
+                    "quantity": 1000,
+                    "deleted_at": null,
+                    "created_at": "2020-09-19T08:52:38.000000Z",
+                    "updated_at": "2020-09-19T10:20:19.000000Z",
+                    "galleries": [
+                    {
+                        "id": 1,
+                        "products_id": 2,
+                        "photo": "http://localhost:8000/storage/assets/product/aHeqn1t5JZel0WYwzcFBLS0NTiCSM5gktW0MveZC.png",
+                        "is_default": true,
+                        "deleted_at": null,
+                        "created_at": "2020-09-19T13:43:02.000000Z",
+                        "updated_at": "2020-09-19T13:43:02.000000Z"
+                    }
+                    ]
+                }
+                }
+            ```
 
 
 ## REFERENSI
