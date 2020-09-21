@@ -30,6 +30,7 @@ class ResponseFormatter
 
     /**
      * response error
+     * = itu untuk default value nya
      */
     public static function error($data = null, $message = null, $code = 400)
     {

@@ -95,6 +95,11 @@ database mysql dijalankan di atas docker dengan konfigurasi docker-compose.yml s
                 }
                 }
             ```
+        - API checkout
+            - `php artisan make:controller API\\CheckoutController`
+            - `php artisan make:request API\\CheckoutRequest`
+
+
 
 
 ## REFERENSI
