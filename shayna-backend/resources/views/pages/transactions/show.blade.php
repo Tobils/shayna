@@ -23,6 +23,7 @@
         <th>Status Transaksi</th>
         <td>{{ $item->transaction_status }}</td>
     </tr>
+
     <tr>
         <th>Pembelian Product</th>
         <td>
@@ -45,7 +46,6 @@
     </tr>
 </table>
 
-
 <div class="row">
     <div class="col-4">
         <a href="{{ route('transactions.status', $item->id) }}?status=SUCCESS" class="btn btn-success btn-block">
@@ -63,4 +63,3 @@
         </a>
     </div>
 </div>
-

@@ -95,9 +95,29 @@ database mysql dijalankan di atas docker dengan konfigurasi docker-compose.yml s
                 }
                 }
             ```
+        
         - API checkout
             - `php artisan make:controller API\\CheckoutController`
             - `php artisan make:request API\\CheckoutRequest`
+        
+        - API Transaksi
+            - `php artisan make:controller API\\TransactionController`
+        - CORS LARAVEL
+            - cors atau cross origin resource sharing
+                - mekanisme yang mengizinkan resource dari luar domain untuk mengakses data di dalam domain server.
+            - [spatie/laravel-cors](https://github.com/spatie/laravel-cors)
+                - `composer require spatie/laravel-cors`
+                - //app/Http/Kernel.php
+                    ```php
+                    // app/Http/Kernel.php
+
+                    protected $middleware = [
+                        ...
+                        \Spatie\Cors\Cors::class
+                    ];
+                    ```
+                - `php artisan vendor:publish --provider="Spatie\Cors\CorsServiceProvider" --tag="config"`
+            - jika gagal bisa menggunakan [fruitcake/laravel-cors](https://github.com/fruitcake/laravel-cors)
 
 
 
