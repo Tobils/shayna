@@ -22,7 +22,8 @@ Vue.use(VueRouter)
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
-    path: '/product',
+    path: '/product/:id',
+    props: true,
     name: 'Product',
     component: Product
   },

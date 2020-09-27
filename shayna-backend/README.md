@@ -119,6 +119,10 @@ database mysql dijalankan di atas docker dengan konfigurasi docker-compose.yml s
                 - `php artisan vendor:publish --provider="Spatie\Cors\CorsServiceProvider" --tag="config"`
             - jika gagal bisa menggunakan [fruitcake/laravel-cors](https://github.com/fruitcake/laravel-cors)
 
+---
+## CARA UPLOAD KE SHARE HOSTING
+
+
 
 
 

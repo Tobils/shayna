@@ -104,12 +104,17 @@ export default {
               "img/mickey2.jpg",
               "img/mickey3.jpg",
               "img/mickey4.jpg",
-          ]
+          ],
+          idProduct: this.$route.params.id
       }
   },
   methods: {
       changeImage(urlImage){
-          this.gambar_dafault = urlImage
+          this.gambar_dafault = urlImage;
+
+          // eslint-disable-next-line no-console
+          console.log(this.idProduct)
+
       }
   }
 }
