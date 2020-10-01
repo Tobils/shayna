@@ -30,10 +30,6 @@
                             </div>
                         </div>
                     </carousel>
-
-
-
-
                 </div>
                 <div class="col-lg-12" v-else>
                     <p>Tidak ada product terbaru</p>
