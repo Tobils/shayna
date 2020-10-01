@@ -14,7 +14,7 @@
                                         <router-link v-bind:to="'/product/'+itemProduct.id"><i class="icon_bag_alt"></i></router-link>
                                     </li>
                                     <li class="quick-view">
-                                        <router-link v-bind:to="'/product/'+itemProduct.id">+ Quick View</router-link>
+                                        <router-link v-bind:to="'/product/'+itemProduct.id">+ Quick View</router-link> <!-- passing id as props to routes params -->
                                     </li>
                                 </ul>
                             </div>
