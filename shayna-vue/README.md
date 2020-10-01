@@ -25,8 +25,36 @@ npm run lint
 npm install axios
 ```
 
-## API Product
-1. part 1
+## LOCAL STORAGE
+
+- template
+```html
+<a @click="saveKeranjang(productDetails.id)"  href="#" class="primary-btn pd-cart"> Add To Cart </a>
+```
+
+- script
+```js
+// methods
+saveKeranjang(idProduct, nameProduct){
+    this.keranjangUser.push(idProduct);
+    const parsed = JSON.stringify(this.keranjangUser);
+    localStorage.setItem('keranjangUser', parsed);
+}
+
+// mounteds
+if(localStorage.getItem('keranjangUser')) {
+    try {
+        this.keranjangUser = JSON.parse(localStorage.getItem('keranjangUser'));
+    } catch (error) {
+        localStorage.removeItem('keranjangStorage');
+    }
+}
+```
+
+- output
+<p align="center">
+<img src="image-docs/local-storage-keranjang.png">
+</p>
 
 
 ### Customize configuration
