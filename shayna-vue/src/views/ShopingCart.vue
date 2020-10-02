@@ -160,7 +160,7 @@ export default {
             };
 
             axios
-                .post("http://localhost:8000/api/checkout", checkoutData)
+                .post("http://shayna-backend.catatan-dev.site/api/checkout", checkoutData)
                 .then(() => this.$router.push('success'))
                 .catch(err => console.log(err));
         }

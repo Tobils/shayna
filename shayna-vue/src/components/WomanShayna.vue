@@ -86,7 +86,7 @@ export default {
             }
         }
         axios
-            .get("http://localhost:8000/api/products")
+            .get("http://shayna-backend.catatan-dev.site/api/products")
             .then(res => (this.products = res.data.data.data))
             .catch(err => console.log(err));
 
