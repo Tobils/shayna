@@ -49,7 +49,7 @@
                                                             <h6>{{ keranjang.name }}</h6>
                                                         </div>
                                                     </td>
-                                                    <td @click="removeItem(keranjangUser.index)" class="si-close">
+                                                    <td @click="removeItem(keranjang.index)" class="si-close">
                                                         <i class="ti-close"></i>
                                                     </td>
                                                 </tr>
@@ -65,7 +65,7 @@
                                     </div>
                                     <div class="select-total">
                                         <span>total:</span>
-                                        <h5>$120.00</h5>
+                                        <h5>${{ totalHarga }}</h5>
                                     </div>
                                     <div class="select-button">
                                         <router-link to="/cart" class="primary-btn view-card">
@@ -101,10 +101,11 @@ export default {
       }
     },
     methods: {
-        removeItem(index) {
+        removeItem(idx) {
+            let keranjangUserStorage = JSON.parse(localStorage.getItem("keranjangUser"));
+            let itemKeranjangUserStorage = keranjangUserStorage.map(itemKeranjangUserStorage => itemKeranjangUserStorage.id);
+            let index = itemKeranjangUserStorage.findIndex(id => id == idx);
             this.keranjangUser.splice(index, 1);
-            const parsed = JSON.stringify(this.keranjangUser);
-            localStorage.setItem('keranjangUser', parsed);
         }
     },
     mounted() {
@@ -117,6 +118,14 @@ export default {
               
           }
       }
+    },
+    computed: {
+        // bisa digunakan tanpa event 
+        totalHarga() {
+            return this.keranjangUser.reduce(function(items, data) {
+                return items + data.price;
+            }, 0);
+        }
     }
 }
 </script>
