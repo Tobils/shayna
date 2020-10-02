@@ -1,0 +1,3 @@
+INSERT INTO db.products (name,slug,`type`,description,price,quantity,deleted_at,created_at,updated_at) VALUES 
+('hoodie mantaf','hoodie-mantaf','hoodie','<p>Sweater Hoodie ini sangat cocok untuk pria dan wanita yang ingin tampil KEREN, dengan bahan yang sangat berkualitas dan sangat nyaman dipakai di berbagai situasi dan kondisi. * Bahan 100% Fleece Cotton Tebal *Untuk Ukuran Ready Stok; *Sablon Polyflek - M : 50 x 60 *Lembut &amp; Hangat - L : 55 x 65 *Nyaman Digunakan Sehari-hari - XL : 60 x 70 - XXL : 65x75</p>',200,106,NULL,'2020-10-02 11:46:02.0','2020-10-02 11:50:19.0')
+;

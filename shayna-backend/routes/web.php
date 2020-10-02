@@ -16,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'DashboardController@index')->name('dashboard');
 
 // ditambahkan secara otomatis saat menjalankan : php artisan ui vue --auth
-// Auth::routes(['register'=>false]);
+Auth::routes(['register'=>false]);
 
-Auth::routes();
+// Auth::routes();
 
 
 Route::get('products/{id}/gallery', 'ProductController@gallery')
